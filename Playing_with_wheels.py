@@ -8,11 +8,13 @@ class Graph:
         def __set_data():
             def to_int(a, b, c, d):
                 return d + c * 10 + b * 100 + a * 1000
+            # to convert the numbers back to the string and assign individual digits to the variables a, b, c and d
             for i in range(self.num_vertices):
                 t = i
                 t, d = divmod(t, 10)
                 t, c = divmod(t, 10)
                 a, b = divmod(t, 10)
+                # check all the possible states from the current state
                 self.edges[i] = [
                     to_int(a, b, c, d-1 if d > 0 else 9),
                     to_int(a, b, c, d+1 if d < 9 else 0),
@@ -26,6 +28,7 @@ class Graph:
         __set_data()
     def set_forbidden_states(self, forbiddens):
         self.forbidden_states = set(forbiddens)
+    #used to calulate the minimum possible path from the graph generated
     def min_path(self, s, e):
         if s == e:
             return 0
@@ -49,15 +52,18 @@ class Graph:
             return
         bfs(s, e)
         return distance_from_s[e]
-
+    
+    #used to check if the edge is a forbidden one, if yes we are not going to procceed in the path else we are going going to take the edge as the new input and recurse through the entire process again
     def valid_edge(self, v_start, v_end):
         if v_end in self.forbidden_states:
             return False
         return True
 
+#function to convert the number string into a number
 def to_int(a, b, c, d):
     return d + c * 10 + b * 100 + a * 1000
 
+#the main function
 num_cases = int(input())
 g = Graph()
 for c in range(num_cases):
