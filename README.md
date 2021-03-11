@@ -10,28 +10,28 @@ For each test case in the input print a line containing the minimum number of bu
 If the target configuration is not reachable then print ‘-1’.
 
 #### Sample Input
-2
-8  0  5  6
-6  5  0  8
-5
-8  0  5  7
-8  0  4  7
-5  5  0  8
-7  5  0  8
-6  4  0  8
-
-0  0  0  0
-5  3  1  7
-8
-0  0  0  1
-0  0  0  9
-0  0  1  0
-0  0  9  0
-0  1  0  0
-0  9  0  0
-1  0  0  0
-9  0  0  0
-
+2__
+8  0  5  6__
+6  5  0  8__
+5__
+8  0  5  7__
+8  0  4  7__
+5  5  0  8__
+7  5  0  8__
+6  4  0  8__
+__
+0  0  0  0__
+5  3  1  7__
+8__
+0  0  0  1__
+0  0  0  9__
+0  0  1  0__
+0  0  9  0__
+0  1  0  0__
+0  9  0  0__
+1  0  0  0__
+9  0  0  0__
+__
 #### Sample Output
-14
--1
+14__
+-1__
